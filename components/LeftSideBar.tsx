@@ -85,28 +85,23 @@ export default function LeftSideBar() {
                     </div>
                 )}
             </nav>
-            <div className="w-full flex flex-col items-start px-0 mt-12">
+            <div className="w-full flex flex-row flex-wrap sm:flex-col items-start gap-2 mt-12">
                 {["사용설명서", "소프트웨어 명칭 및 버전", "의료기기 인증 정보"].map((item, idx) => (
-                    <div key={idx} className="relative w-full h-10 my-1">
+                    <div key={idx} className="relative h-10 my-1 w-auto sm:w-full">
                         {/* Background Layer */}
                         <div className="absolute inset-0 bg-white rounded-lg" />
 
-                        {/* Inner Highlight (hover effect placeholder) */}
+                        {/* Inner Highlight */}
                         <div className="absolute inset-y-0 left-[10%] right-[10%] bg-white rounded-[10px]" />
 
-                        {/* Decorative Mask (optional highlight placeholder, currently invisible) */}
+                        {/* Decorative Mask */}
                         <div className="absolute inset-0 bg-[#0054A6] opacity-0 rounded-lg" />
 
                         {/* Text Row */}
-                        <div className="absolute left-10 top-1/2 transform -translate-y-1/2 flex items-center gap-2 w-40 h-5">
+                        <div className="absolute left-10 right-4 top-1/2 transform -translate-y-1/2 flex items-center gap-2 whitespace-nowrap overflow-hidden text-ellipsis">
                             <span className="text-[#8395AC] font-normal text-[13px] leading-[21px]">
                                 {item}
                             </span>
-                        </div>
-
-                        {/* Add display: contents for mobile devices */}
-                        <div className="lg:hidden block" style={{ display: "contents" }}>
-                            {/* Any additional content here that should appear as part of the structure */}
                         </div>
                     </div>
                 ))}
