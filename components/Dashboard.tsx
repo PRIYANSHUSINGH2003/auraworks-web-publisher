@@ -11,11 +11,11 @@ export default function Dashboard() {
             </div>
 
             {/* Greeting Section with Profile Image */}
-            <div className="flex items-center mb-12 space-x-4 border-b border-gray-200 pb-6">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start mb-12 space-y-4 sm:space-y-0 sm:space-x-4 border-b border-gray-200 pb-6">
                 {/* Profile Image */}
-                <div className="relative" style={{ width: '85px', height: '85px' }}>
+                <div className="relative w-[85px] h-[85px]">
                     <svg width="84" height="85" viewBox="0 0 84 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_23_386)">
+                        <g clipPath="url(#clip0_23_386)">
                             <path opacity="0.4" d="M82 42.8887C82 54.9421 76.6686 65.7504 68.2353 73.084C61.2122 79.1912 52.0379 82.8887 42 82.8887C31.9621 82.8887 22.7878 79.1912 15.7647 73.084C7.33139 65.7504 2 54.9421 2 42.8887C2 20.7973 19.9086 2.88867 42 2.88867C64.0914 2.88867 82 20.7973 82 42.8887Z" fill="#B6C2D9" />
                             <circle cx="42" cy="34.8887" r="12" fill="#B6C2D9" />
                             <path d="M68.2363 73.084C64.2626 62.4558 54.0155 54.8887 42.001 54.8887C29.9865 54.8887 19.7394 62.4558 15.7656 73.084C22.7887 79.1912 31.963 82.8887 42.001 82.8887C52.0389 82.8887 61.2132 79.1912 68.2363 73.084Z" fill="#B6C2D9" />
@@ -26,16 +26,15 @@ export default function Dashboard() {
                             </clipPath>
                         </defs>
                     </svg>
-
                 </div>
 
                 {/* Greeting Text */}
-                <div className="space-y-3">
-                    <div className="flex gap-2 text-4xl font-bold text-gray-900">
+                <div className="space-y-3 text-center sm:text-left">
+                    <div className="flex flex-col sm:flex-row gap-2 text-3xl sm:text-4xl font-bold text-gray-900">
                         <span>박의사님,</span>
                         <span>안녕하세요</span>
                     </div>
-                    <div className="text-xl text-gray-600">
+                    <div className="text-lg sm:text-xl text-gray-600">
                         의사 코드 - UH2406001
                     </div>
                 </div>
